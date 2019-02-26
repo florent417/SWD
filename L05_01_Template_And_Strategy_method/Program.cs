@@ -10,6 +10,12 @@ namespace L05_01_Template_And_Strategy_method
     {
         static void Main(string[] args)
         {
+            ArrayGenerator testArray = new ArrayGenerator(10,60,8);
+
+            foreach (var element in testArray.RandomNumberArray)
+            {
+                Console.WriteLine("{0}",element);
+            }
         }
     }
 }
