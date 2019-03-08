@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L05_01_Template_And_Strategy_method
 {
-    class ArrayGenerator
+    class RandomArrayGenerator : IArrayGenerator
     {
         private int _max = 0;
         private int _size = 0;
@@ -14,12 +14,8 @@ namespace L05_01_Template_And_Strategy_method
         public int[] RandomNumberArray { get; private set; }
         private Random rnd;
 
-        public ArrayGenerator(int size, int max, int seed)
+        public int[] ArrayGenerator()
         {
-            _max = max;
-            _size = size;
-            _seed = seed;
-
             RandomNumberArray = new int[_size];
             rnd = new Random(_seed);
 
@@ -27,7 +23,13 @@ namespace L05_01_Template_And_Strategy_method
             {
                 RandomNumberArray[i] = rnd.Next(_max);
             }
-
+            return RandomNumberArray;
+        }
+        RandomArrayGenerator(int max, int size, int seed)
+        {
+            _max = max;
+            _size = size;
+            _seed = seed;
         }
     }
 }
