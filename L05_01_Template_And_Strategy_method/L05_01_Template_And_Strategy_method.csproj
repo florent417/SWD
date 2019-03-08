@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RandomArrayGenerator.cs" />
-    <Compile Include="BubbleSort.cs" />
-    <Compile Include="IArrayGenerator.cs" />
-    <Compile Include="ISort.cs" />
+    <Compile Include="Generators\RandomArrayGenerator.cs" />
+    <Compile Include="Sorters\BubbleSort.cs" />
+    <Compile Include="Generators\IArrayGenerator.cs" />
+    <Compile Include="Sorters\ISort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supersorter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
