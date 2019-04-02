@@ -8,5 +8,6 @@ namespace Count
 {
     class TotalCount
     {
+        public int Count { get; set; }
     }
 }
